@@ -65,9 +65,7 @@ T	find_pivot(const T &first, const T &second, const T &third) {
 
 template <typename P>
 size_t	partition(P array, size_t start, size_t end) {
-	std::cout << "sperma 1" << std::endl;
 	typename std::remove_pointer<P>::type	pivot = find_pivot(array[start], array[start + ((end - start) >> 1)], array[end]);
-	std::cout << "sperma 2" << std::endl;
 	size_t	count = 0;
 	for (size_t i = start + 1; i <= end; ++i) {
 		if (array[i] <= pivot) {
