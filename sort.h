@@ -54,9 +54,9 @@ void	heap_sort(P array, int size) {
 
 template <typename T>
 T	find_pivot(const T &first, const T &second, const T &third) {
-	if (first >= second && first >= third) {
+	if (first >= second && first <= third) {
 		return first;
-	} else if (second >= first && second >= third) {
+	} else if (second >= first && second <= third) {
 		return second;
 	} else {
 		return third;
